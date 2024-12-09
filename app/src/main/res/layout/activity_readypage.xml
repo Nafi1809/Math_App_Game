@@ -8,7 +8,7 @@
     tools:context=".readypage">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout3"
         android:layout_width="430dp"
         android:layout_height="120dp"
         android:background="@drawable/upbg"
@@ -16,7 +16,8 @@
         android:rotationX="180"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DuplicateIds" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -28,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints"></LinearLayout>
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -43,7 +44,7 @@
         app:layout_constraintVertical_bias="0.264" />
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/GOO"
         android:layout_width="273dp"
         android:layout_height="41dp"
         android:background="@drawable/button_go"
@@ -53,8 +54,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.757">
 
-
-    <TextView
+        <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

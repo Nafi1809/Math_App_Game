@@ -10,14 +10,16 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Home"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#4F1787"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,7 +35,7 @@
         app:layout_constraintVertical_bias="0.217" />
 
     <RelativeLayout
-        android:id="@+id/RelativeLayout"
+        android:id="@+id/btnPlay"
         android:layout_width="288dp"
         android:layout_height="42dp"
         android:layout_marginEnd="57dp"
@@ -53,7 +55,7 @@
             android:text="Play"
             android:textAlignment="center"
             android:textColor="#FBFBFB"
-            android:textSize="21sp" />
+            android:textSize="19sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -61,8 +63,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="666dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
         <!-- RelativeLayout untuk imageView6 -->
         <RelativeLayout
@@ -82,7 +86,7 @@
 
         <!-- ImageView2 dipindahkan ke relativeLayout utama -->
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/btnQuiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -90,24 +94,28 @@
 
         <!-- ImageView3 di kanan dan tengah secara vertikal -->
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/BtnAbout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="50dp"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="50dp"
             app:srcCompat="@drawable/help_hitam" />
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView121"
         android:layout_width="320dp"
         android:layout_height="135dp"
+        android:layout_marginTop="348dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Ayo, mulai latihan matematika! Di MathApp, kamu bisa belajar operasi hitung dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian dengan cara yang mudah dan menyenangkan. Mari asah keterampilan matematikamu!"
         android:textAlignment="center"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="356dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

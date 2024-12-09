@@ -16,7 +16,7 @@
 
         <!-- RelativeLayout untuk imageView6 -->
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/home_hitam"
@@ -25,7 +25,7 @@
 
         <!-- ImageView2 dipindahkan ke relativeLayout utama -->
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/btnQuiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -90,7 +90,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423"
+        app:layout_constraintVertical_bias="0.411"
         tools:layout_editor_absoluteX="38dp" />
 
     <TextView

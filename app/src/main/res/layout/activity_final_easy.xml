@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/btnMedium"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:layout_marginHorizontal="75dp"
