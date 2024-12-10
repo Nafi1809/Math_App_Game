@@ -8,25 +8,33 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="339dp"
+        android:layout_height="41dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Quiz"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#4F1787"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
         tools:ignore="MissingConstraints" />
+
 
     <RelativeLayout
         android:id="@+id/btnEasy"
         android:layout_width="280dp"
         android:layout_height="55dp"
         android:background="@drawable/easybtn"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="370dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -41,15 +49,18 @@
             android:textSize="21sp" />
     </RelativeLayout>
 
-
     <RelativeLayout
         android:id="@+id/btnMedium"
         android:layout_width="280dp"
         android:layout_height="56dp"
         android:background="@drawable/normalbtn"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="446dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
         tools:ignore="DuplicateIds,MissingConstraints">
 
         <TextView
@@ -61,7 +72,7 @@
             android:text="Normal"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="21sp"/>
+            android:textSize="21sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -71,8 +82,12 @@
         android:layout_marginHorizontal="75dp"
         android:background="@drawable/hardbtn"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="522dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -96,21 +111,26 @@
         android:textColor="#4F1787"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="316dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="212dp"
         android:layout_height="214dp"
-        android:layout_marginTop="96dp"
         android:scaleType="fitXY"
         android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"

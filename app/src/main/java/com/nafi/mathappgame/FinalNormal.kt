@@ -4,8 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -15,9 +18,9 @@ class FinalNormal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_final_normal)
-        val texthrd = findViewById<ImageView>(R.id.btnHard)
+        val texthrd = findViewById<LinearLayout>(R.id.btnHard)
         texthrd.setOnClickListener{
-            val intent = Intent(this, FinalHard::class.java)
+            val intent = Intent(this, hard::class.java)
             startActivity(intent)
         }
     }

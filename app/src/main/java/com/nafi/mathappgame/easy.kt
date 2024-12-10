@@ -12,16 +12,17 @@ import android.widget.TextView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class FinalEasy : AppCompatActivity() {
-    @SuppressLint("WrongViewCast",)
+class easy : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_final_easy)
-        val textmdm = findViewById<LinearLayout>(R.id.btnMedium)
-        textmdm.setOnClickListener{
-            val intent = Intent(this, medium::class.java)
+        setContentView(R.layout.activity_easy)
+        val texteasys = findViewById<LinearLayout>(R.id.submitButtonContainer)
+        texteasys.setOnClickListener {
+            val intent = Intent(this, FinalEasy::class.java)
             startActivity(intent)
         }
+
     }
 }

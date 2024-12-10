@@ -10,15 +10,18 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Home"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#4F1787"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -90,7 +93,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            app:srcCompat="@drawable/quiz_hitam" />
+            app:srcCompat="@drawable/quiz_hitam"
+            android:clickable="true" />
 
         <!-- ImageView3 di kanan dan tengah secara vertikal -->
         <ImageView
@@ -107,15 +111,16 @@
         android:id="@+id/textView121"
         android:layout_width="320dp"
         android:layout_height="135dp"
-        android:layout_marginTop="348dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Ayo, mulai latihan matematika! Di MathApp, kamu bisa belajar operasi hitung dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian dengan cara yang mudah dan menyenangkan. Mari asah keterampilan matematikamu!"
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
