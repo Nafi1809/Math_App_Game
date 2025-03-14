@@ -2,38 +2,30 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="center"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayoutThird"
         android:layout_width="430dp"
         android:layout_height="120dp"
-        android:layout_marginBottom="41dp"
         android:background="@drawable/upbg"
         android:orientation="vertical"
         android:rotationX="180"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateIds,MissingConstraints"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="245dp"
         android:layout_height="233dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutForth"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayoutThird"
-        app:layout_constraintVertical_bias="0.158"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
@@ -43,33 +35,26 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutForth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="280dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="#F3ECEC"
         android:elevation="4dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateIds">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
             android:id="@+id/InputEmail"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:ems="10"
-            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress" />
     </LinearLayout>
@@ -77,25 +62,20 @@
     <LinearLayout
         android:id="@+id/linearLayoutSecond"
         android:layout_width="280dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="#F3ECEC"
         android:elevation="4dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
             android:id="@+id/InputPassword"
             android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:fontFamily="@font/poppins_medium"
-            android:hint="@string/password"
+            android:layout_height="wrap_content"
+            android:hint="Password"
             android:inputType="textPassword" />
     </LinearLayout>
 
@@ -103,39 +83,68 @@
         android:id="@+id/Login"
         android:layout_width="277dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/loginpage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSecond"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
             android:text="Login"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="21sp" />
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Login with Google"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnPhone"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Login with Phone"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/blue"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true" />
+
     <LinearLayout
         android:id="@+id/linearLayoutForth"
         android:layout_width="430dp"
         android:layout_height="120dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/downbg"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints">
-
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

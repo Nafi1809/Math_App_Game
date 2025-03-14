@@ -1,4 +1,5 @@
 <resources>
+    <string name="default_web_client_id">413717243659-egehig8d59va7jhtgbto9f3dtes4ektg.apps.googleusercontent.com</string>
     <string name="app_name">MathAppGame</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

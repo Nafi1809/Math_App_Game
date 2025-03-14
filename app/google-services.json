@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "410685774805",
+    "project_id": "mathappgame",
+    "storage_bucket": "mathappgame.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410685774805:android:047a0fcbfefce3be64bb5c",
+        "android_client_info": {
+          "package_name": "com.nafi.mathappgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410685774805-k4neuhmm6gnphhltfcprdka19sfm8r36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nafi.mathappgame",
+            "certificate_hash": "d11cb04847070936024bbdaddfe4307cb7e8ee4f"
+          }
+        },
+        {
+          "client_id": "410685774805-e94b8ra0g27rd6droo82g9vls7iormg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgTcVl9TdSc0cr0ym9-NeSbYoZ1VJsgs4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410685774805-e94b8ra0g27rd6droo82g9vls7iormg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
