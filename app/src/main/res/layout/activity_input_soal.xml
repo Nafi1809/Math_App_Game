@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Question" />
+
+    <EditText
+        android:id="@+id/etid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="id"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etAnswer_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Answer A" />
+
+    <EditText
+        android:id="@+id/etAnswer_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Answer B" />
+
+    <EditText
+        android:id="@+id/etAnswer_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Answer C" />
+
+    <EditText
+        android:id="@+id/etAnswer_D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Answer D" />
+
+    <EditText
+        android:id="@+id/etCorrect_Answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correct Answer" />
+
+    <EditText
+        android:id="@+id/etDifficult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Difficulty" />
+
+    <Button
+        android:id="@+id/btnSimpanSoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan Soal" />
+
+</LinearLayout>
