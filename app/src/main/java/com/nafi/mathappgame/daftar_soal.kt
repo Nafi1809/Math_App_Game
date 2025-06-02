@@ -17,19 +17,20 @@ class daftar_soal : AppCompatActivity() {
     private lateinit var menuAdapter: MenuAdapter
     private val soalList = mutableListOf<soal>()
     private lateinit var firestore: FirebaseFirestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.daftar_soal)
         firestore = FirebaseFirestore.getInstance()
         rvSoal = findViewById(R.id.rvSoal)
         btnAddSoal = findViewById(R.id.btnAddSoal)
-        menuAdapter = MenuAdapter(soalList)
+        menuAdapter = MenuAdapter(soalList) { soal ->
+            val intent = Intent(this, EditSoalActivity::class.java)
+            intent.putExtra("soalId", soal.id)
+            startActivity(intent)
+        }
         rvSoal.layoutManager = LinearLayoutManager(this)
         rvSoal.adapter = menuAdapter
-
         btnAddSoal.setOnClickListener {
             val intent = Intent(this, InputSoalActivity::class.java)
             startActivityForResult(intent, REQUEST_CODE_ADD_SOAL)
@@ -58,5 +59,9 @@ class daftar_soal : AppCompatActivity() {
 
     companion object {
         const val REQUEST_CODE_ADD_SOAL = 1
+    }
+    override fun onResume() {
+        super.onResume()
+        loadSoalData()
     }
 }

@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nafi.mathappgame.R
 import com.nafi.mathappgame.model.soal
 
-class MenuAdapter(private val soalList: List<soal>) :
-    RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+
+class MenuAdapter(
+    private val soalList: List<soal>,
+    private val onItemClick: (soal) -> Unit
+) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_soal, parent, false)
         return MenuViewHolder(view)
@@ -24,6 +27,7 @@ class MenuAdapter(private val soalList: List<soal>) :
         holder.tvanswer_D.text = soal.answer_D
         holder.tvcorrect_answer.text = soal.correct_answer
         holder.tvdiffiqult.text = soal.difficult
+        holder.itemView.setOnClickListener {onItemClick(soal)}
 
     }
     override fun getItemCount(): Int {
