@@ -41,7 +41,7 @@ class InputSoalActivity : Activity() {
     private fun saveSoal() {
         val question = etQuestion.text.toString()
 
-        val id = etId.text.toString().toDoubleOrNull() ?: 0.0
+        val id = etId.text.toString()
         val answerA = etAnswerA.text.toString()
         val answerB = etAnswerB.text.toString()
         val answerC = etAnswerC.text.toString()

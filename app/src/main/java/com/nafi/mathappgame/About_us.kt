@@ -22,7 +22,7 @@ class About_us : AppCompatActivity() {
         }
         val textQuiz = findViewById<ImageView>(R.id.btnQuiz)
         textQuiz.setOnClickListener{
-            val intent = Intent(this, Quiz::class.java)
+            val intent = Intent(this, daftar_soal::class.java)
             startActivity(intent)
         }
     }

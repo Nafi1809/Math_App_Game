@@ -20,7 +20,7 @@ class MenuAdapter(
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         val soal = soalList[position]
         holder.tvNamaSoal.text = soal.question
-        holder.tvid.text = "Rp ${soal.id}"
+        holder.tvid.text = "Id ${soal.id}"
         holder.tvanswer_A.text = soal.answer_A
         holder.tvanswer_B.text = soal.answer_B
         holder.tvanswer_C.text = soal.answer_C

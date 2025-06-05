@@ -49,13 +49,13 @@ class EditSoalActivity : AppCompatActivity() {
                 "difficult" to etdifficult.text.toString()
             )
             firestore.collection("soal").document(soalId).update(update).addOnSuccessListener {
-                Toast.makeText(this, "soal diubah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Soal diubah", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
         btnHapus.setOnClickListener {
             firestore.collection("soal").document(soalId).delete().addOnSuccessListener {
-                Toast.makeText(this, "soal dihapus", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Soal dihapus", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }
@@ -63,11 +63,11 @@ class EditSoalActivity : AppCompatActivity() {
     private fun ambilData() {
         firestore.collection("soal").document(soalId).get().addOnSuccessListener { doc ->
             etquestion.setText(doc.getString("question"))
-            etanswer_A.setText(doc.getString("answer A"))
-            etanswer_B.setText(doc.getString("answer B"))
-            etanswer_C.setText(doc.getString("answer C"))
-            etanswer_D.setText(doc.getString("answer D"))
-            etcorrect_answer.setText(doc.getString("correct answer"))
+            etanswer_A.setText(doc.getString("answer_A"))
+            etanswer_B.setText(doc.getString("answer_B"))
+            etanswer_C.setText(doc.getString("answer_C"))
+            etanswer_D.setText(doc.getString("answer_D"))
+            etcorrect_answer.setText(doc.getString("correct_answer"))
             etdifficult.setText(doc.getString("difficult"))
         }
     }

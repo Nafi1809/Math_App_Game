@@ -17,6 +17,7 @@ class daftar_soal : AppCompatActivity() {
     private lateinit var menuAdapter: MenuAdapter
     private val soalList = mutableListOf<soal>()
     private lateinit var firestore: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
@@ -24,11 +25,13 @@ class daftar_soal : AppCompatActivity() {
         firestore = FirebaseFirestore.getInstance()
         rvSoal = findViewById(R.id.rvSoal)
         btnAddSoal = findViewById(R.id.btnAddSoal)
+
         menuAdapter = MenuAdapter(soalList) { soal ->
             val intent = Intent(this, EditSoalActivity::class.java)
             intent.putExtra("soalId", soal.id)
             startActivity(intent)
         }
+
         rvSoal.layoutManager = LinearLayoutManager(this)
         rvSoal.adapter = menuAdapter
         btnAddSoal.setOnClickListener {
@@ -44,7 +47,8 @@ class daftar_soal : AppCompatActivity() {
             soalList.clear()
             for (document in documents) {
                 val soal = document.toObject(soal::class.java)
-                soalList.add(soal)
+                val soalDenganId = soal.copy(id = document.id)  // ⬅️ Tambahkan id dokumen Firebase
+                soalList.add(soalDenganId)
             }
             menuAdapter.notifyDataSetChanged()
         }
